@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://40x8oybku30e"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4xowi"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_a202f"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0, -9.993506, 0, 0, -0.3603326, 0, 0, 0, 10, 0, 0, 0)
+mesh = SubResource("BoxMesh_4xowi")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9878995, 0)
+mesh = SubResource("CapsuleMesh_a202f")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MeshInstance3D2"]
+speed_scale = 1.44
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9773384, 0.21168302, 0, -0.21168302, 0.9773384, 0, 1.8517338, 2.1441283)
